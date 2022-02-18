@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct MyListsView: View {
+    
+    let myLists: [MyListViewModel]
+    
     var body: some View {
-        List(1...20, id: \.self) { index in
-            Text("MyList \(index)")
+        List(myLists) { myList in
+           MyListCellView(vm: myList)
         }
     }
 }
 
 struct MyListsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyListsView()
+        MyListsView(myLists: [])
     }
 }

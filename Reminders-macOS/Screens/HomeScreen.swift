@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeScreen: View {
     var body: some View {
         NavigationView {
-            SideBar()
+            SideBar(vm: HomeViewModel())
+                .frame(minWidth: 200)
             Text("Details")
         }
     }

@@ -10,10 +10,15 @@ import SwiftUI
 struct SideBar: View {
     
     @State private var isPresented: Bool = false
+    @StateObject private var vm: HomeViewModel
+    
+    init(vm: HomeViewModel) {
+        _vm = StateObject(wrappedValue: vm)
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
-            MyListsView()
+            MyListsView(myLists: vm.myLists)
             
             Button {
                 isPresented = true
@@ -27,7 +32,9 @@ struct SideBar: View {
 
         }.sheet(isPresented: $isPresented, onDismiss: { }) {
             AddNewListView { newListName, colorCode in
-                    // save
+                // saving a new list
+                vm.saveNewList(newListName: newListName, colorCode: colorCode)
+                
             }.frame(width: 600, height: 400)
                 .foregroundColor(.black)
         }
@@ -36,6 +43,6 @@ struct SideBar: View {
 
 struct SideBar_Previews: PreviewProvider {
     static var previews: some View {
-        SideBar()
+        SideBar(vm: HomeViewModel())
     }
 }

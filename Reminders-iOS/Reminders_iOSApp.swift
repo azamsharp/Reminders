@@ -11,7 +11,8 @@ import SwiftUI
 struct Reminders_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+            HomeScreen(vm: HomeViewModel())
         }
     }
 }

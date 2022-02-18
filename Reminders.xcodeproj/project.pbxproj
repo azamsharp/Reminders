@@ -28,6 +28,16 @@
 		8D87165627BEDE2C00B1AF19 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87165427BEDE2C00B1AF19 /* ColorPickerView.swift */; };
 		8D87165927BEE26100B1AF19 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87165827BEE26100B1AF19 /* Color+Extensions.swift */; };
 		8D87165A27BEE26100B1AF19 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87165827BEE26100B1AF19 /* Color+Extensions.swift */; };
+		8D87165D27C0243400B1AF19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87165C27C0243400B1AF19 /* HomeViewModel.swift */; };
+		8D87165E27C0243400B1AF19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87165C27C0243400B1AF19 /* HomeViewModel.swift */; };
+		8D87166127C024CF00B1AF19 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166027C024CF00B1AF19 /* CoreDataManager.swift */; };
+		8D87166227C024CF00B1AF19 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166027C024CF00B1AF19 /* CoreDataManager.swift */; };
+		8D87166427C025DB00B1AF19 /* MyList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166327C025DB00B1AF19 /* MyList+Extensions.swift */; };
+		8D87166527C025DB00B1AF19 /* MyList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166327C025DB00B1AF19 /* MyList+Extensions.swift */; };
+		8D87166727C0266E00B1AF19 /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166627C0266E00B1AF19 /* MyListViewModel.swift */; };
+		8D87166827C0266E00B1AF19 /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166627C0266E00B1AF19 /* MyListViewModel.swift */; };
+		8D87166A27C02FCD00B1AF19 /* MyListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166927C02FCD00B1AF19 /* MyListCellView.swift */; };
+		8D87166B27C02FCD00B1AF19 /* MyListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87166927C02FCD00B1AF19 /* MyListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +59,11 @@
 		8D87165127BEDDD400B1AF19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D87165427BEDE2C00B1AF19 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		8D87165827BEE26100B1AF19 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		8D87165C27C0243400B1AF19 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8D87166027C024CF00B1AF19 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8D87166327C025DB00B1AF19 /* MyList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+Extensions.swift"; sourceTree = "<group>"; };
+		8D87166627C0266E00B1AF19 /* MyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModel.swift; sourceTree = "<group>"; };
+		8D87166927C02FCD00B1AF19 /* MyListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +145,8 @@
 		8D87163C27BED85F00B1AF19 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8D87165F27C024C400B1AF19 /* Managers */,
+				8D87165B27C0242000B1AF19 /* View Models */,
 				8D87165727BEE25000B1AF19 /* Extensions */,
 				8D87165027BEDDC800B1AF19 /* Utils */,
 				8D87164727BEDAAD00B1AF19 /* Views */,
@@ -161,6 +178,7 @@
 				8D87164827BEDAC400B1AF19 /* MyListsView.swift */,
 				8D87164D27BEDCDF00B1AF19 /* AddNewListView.swift */,
 				8D87165427BEDE2C00B1AF19 /* ColorPickerView.swift */,
+				8D87166927C02FCD00B1AF19 /* MyListCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,8 +195,26 @@
 			isa = PBXGroup;
 			children = (
 				8D87165827BEE26100B1AF19 /* Color+Extensions.swift */,
+				8D87166327C025DB00B1AF19 /* MyList+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8D87165B27C0242000B1AF19 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D87165C27C0243400B1AF19 /* HomeViewModel.swift */,
+				8D87166627C0266E00B1AF19 /* MyListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		8D87165F27C024C400B1AF19 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8D87166027C024CF00B1AF19 /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +318,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D87164927BEDAC400B1AF19 /* MyListsView.swift in Sources */,
+				8D87166A27C02FCD00B1AF19 /* MyListCellView.swift in Sources */,
+				8D87166427C025DB00B1AF19 /* MyList+Extensions.swift in Sources */,
+				8D87165D27C0243400B1AF19 /* HomeViewModel.swift in Sources */,
 				8D87164327BED9AA00B1AF19 /* HomeScreen.swift in Sources */,
 				8D87164E27BEDCDF00B1AF19 /* AddNewListView.swift in Sources */,
 				8D87165927BEE26100B1AF19 /* Color+Extensions.swift in Sources */,
+				8D87166727C0266E00B1AF19 /* MyListViewModel.swift in Sources */,
 				8D87165527BEDE2C00B1AF19 /* ColorPickerView.swift in Sources */,
 				8D87161E27BED83800B1AF19 /* Reminders_iOSApp.swift in Sources */,
 				8D87163F27BED8B400B1AF19 /* RemindersModel.xcdatamodeld in Sources */,
+				8D87166127C024CF00B1AF19 /* CoreDataManager.swift in Sources */,
 				8D87165227BEDDD400B1AF19 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,15 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D87166B27C02FCD00B1AF19 /* MyListCellView.swift in Sources */,
 				8D87165627BEDE2C00B1AF19 /* ColorPickerView.swift in Sources */,
 				8D87164C27BEDBB500B1AF19 /* SideBar.swift in Sources */,
 				8D87165A27BEE26100B1AF19 /* Color+Extensions.swift in Sources */,
+				8D87166527C025DB00B1AF19 /* MyList+Extensions.swift in Sources */,
+				8D87165E27C0243400B1AF19 /* HomeViewModel.swift in Sources */,
 				8D87164A27BEDAC400B1AF19 /* MyListsView.swift in Sources */,
 				8D87164627BED9DA00B1AF19 /* HomeScreen.swift in Sources */,
+				8D87166827C0266E00B1AF19 /* MyListViewModel.swift in Sources */,
 				8D87164F27BEDCDF00B1AF19 /* AddNewListView.swift in Sources */,
 				8D87165327BEDDD400B1AF19 /* Constants.swift in Sources */,
 				8D87163027BED85000B1AF19 /* Reminders_macOSApp.swift in Sources */,
 				8D87164027BED8B400B1AF19 /* RemindersModel.xcdatamodeld in Sources */,
+				8D87166227C024CF00B1AF19 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
